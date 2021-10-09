@@ -3,6 +3,7 @@ Please use fields "Title", "Url", "Tags", and optional "Blurb".
 Existing tags: 
   "Pixel Art"
   "UI"
+  "Assets"
   (Add more here)
 */
 
@@ -24,5 +25,11 @@ module.exports = [
     Url: "https://www.gameuidatabase.com",
     Tags: ["UI"]
   },
+  {
+    Title: "Kenney Assets",
+    Blurb: "Kenney has created thousands of sprites, 3D models and sound effects which you can use in your projects. The generous public domain license allows any kind of use, even commercial!",
+    Url: "https://www.kenney.nl/assets",
+    Tags: ["Assets"]
+  }
   //Add more entries above this line ^
 ]
