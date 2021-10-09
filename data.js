@@ -79,6 +79,25 @@ module.exports = [
     Url: "https://codepen.io/punkydrewster713/posts/",
     Tags: ["Game Dev", "Podcast"],
   },
+  {
+    Title: "Peter Milko - Pixel Art 101",
+    Blurb: "Peter Milko Youtube's series for pixel art beginner using Aseprite",
+    Url: "https://www.youtube.com/playlist?list=PLmac3HPrav-9UWt-ahViIZxpyQxJ2wPSH",
+    Tags: ["Pixel Art"],
+  },
+  {
+    Title: "AdamCYounis - Pixel Art Class",
+    Blurb: "AdamCYounis Youtube's series for pixel art beginner using Aseprite",
+    Url: "https://www.youtube.com/playlist?list=PLLdxW--S_0h4dlWUpl-TzBp-ulqK3NiM_",
+    Tags: ["Pixel Art"],
+  },
+  {
+    Title: "Brandon James Greer Youtube Channel",
+    Blurb:
+      "Technical aspects and design choices behind pixel art construction, tutorials, timelapses, and concept-to-completion of pixel art pieces!",
+    Url: "https://www.youtube.com/channel/UCC26K7LTSrJK0BPAUyyvtQg",
+    Tags: ["Pixel Art"],
+  },
 
   //Add more entries above this line ^
 ];
