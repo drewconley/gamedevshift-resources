@@ -8,7 +8,8 @@ Existing tags:
   "Assets", 
   "Game Dev",
   "React",
-  "Threejs"
+  "Threejs",
+  "Podcast"
   (Add more here)
 */
 
@@ -53,5 +54,31 @@ module.exports = [
     Url: "https://github.com/pmndrs/racing-game",
     Tags: ["Game Dev", "React", "Threejs"],
   },
+  {
+    Title: "Syntax - Building Steam Games with React",
+    Blurb:
+      "In this episode, Scott and Wes talk with Drew Conley about building games with Javascript.",
+    Url: "https://syntax.fm/show/176/building-steam-games-with-react",
+    Tags: ["Game Dev", "Podcast"],
+  },
+  {
+    Title: "Syntax - Building Steam Games with React",
+    Blurb:
+      "In this episode, Scott and Wes talk with Drew Conley about building games with Javascript.",
+    Url: "https://syntax.fm/show/176/building-steam-games-with-react",
+    Tags: ["Game Dev", "Podcast"],
+  },
+  {
+    Title: "Drew Conley Blog",
+    Blurb: "A collection of blog post related to game development ",
+    Url: "https://drewconley.dev/blog",
+    Tags: ["Game Dev", "Podcast"],
+  },
+  {
+    Title: "Drew Conley Codepen Blog",
+    Url: "https://codepen.io/punkydrewster713/posts/",
+    Tags: ["Game Dev", "Podcast"],
+  },
+
   //Add more entries above this line ^
 ];
