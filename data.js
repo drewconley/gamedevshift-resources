@@ -1,7 +1,9 @@
 /*
 Please use fields "Title", "Url", "Tags", and optional "Blurb".
 Existing tags: 
-  "Pixel Art"
+  "Pixel Art",
+  "Godot",
+  "JavaScript"
   "UI"
   "Assets"
   (Add more here)
@@ -11,7 +13,13 @@ module.exports = [
   {
     Title: "Miniboss Pixel art tutorials",
     Url: "https://blog.studiominiboss.com/pixelart",
-    Tags: ["Pixel Art"]
+    Tags: ["Pixel Art"],
+  },
+  {
+    Title: "Drew Conley Youtube channel",
+    Blurb: "YouTube channel dedicated to Game Development using JavaScript or Godot game engine.",
+    Url: "https://www.youtube.com/c/DrewConley/",
+    Tags: ["Game Dev", "Godot", "JavaScript"],
   },
   {
     Title: "Interface in Game",
@@ -32,4 +40,4 @@ module.exports = [
     Tags: ["Assets"]
   }
   //Add more entries above this line ^
-]
+];
