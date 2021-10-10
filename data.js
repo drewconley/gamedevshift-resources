@@ -4,6 +4,8 @@ Existing tags:
   "Pixel Art"
   "UI"
   "Assets"
+  "Tools"
+  "Team Pick"
   (Add more here)
 */
 
@@ -30,6 +32,12 @@ module.exports = [
     Blurb: "Kenney has created thousands of sprites, 3D models and sound effects which you can use in your projects. The generous public domain license allows any kind of use, even commercial!",
     Url: "https://www.kenney.nl/assets",
     Tags: ["Assets"]
+  },
+  {
+    Title: "Aseprite",
+    Blurb: "Animated sprite editor & pixel art tool",
+    Url: "https://www.aseprite.org",
+    Tags: ["Tools", "Pixel Art", "Team Pick"]
   }
   //Add more entries above this line ^
 ]
