@@ -1,0 +1,39 @@
+@import "../../variables.scss";
+
+.root {
+  width: 100%;
+  background: $color-white;
+  box-shadow: 0px 4px 4px rgba($color-black, 0.15);
+  border-radius: 8px;
+  padding: 30px;
+  overflow: hidden;
+}
+
+.heading {
+  color: $color-outline;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.heading a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.heading a:hover {
+  text-decoration: underline;
+}
+
+.tags {
+  margin: 12px 0 0 0;
+}
+
+.blurb {
+  margin: 12px 0 0 0;
+  color: $color-outline;
+  font-size: 16px;
+  line-height: 1.5;
+}
