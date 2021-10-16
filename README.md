@@ -23,15 +23,15 @@ Please follow the existing format.
 ### Initial setup
 
 1.  Navigate to repository on Github
-2.  Goto Ssettings
+2.  Goto Settings
 3.  Goto Pages
 4.  Select branch `gh-pages` (if this is not yet visible, run a deployment first)
 5.  Click Save
 
 ### Manual deployment
 
-The following steps can be ran manually, locally, to publish a new version of the site. It will build the project on a `gh-pages` branch and push it to Github
+The following steps can be ran locally to publish a new version of the site. It will build the project on a `gh-pages` branch and push it to Github.
 
-**Note** This will deploy anything/everything in the current directory - commited, staged or unstaged.
+**Note** This will deploy anything and everything in the current directory - commited, staged or unstaged.
 
 1. `npm run deploy`
