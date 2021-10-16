@@ -1,0 +1,90 @@
+@import "../../variables.scss";
+
+.root {
+  background: $color-white;
+  box-shadow: 0px 0 4px rgba($color-black, 0.15);
+  height: $header-height;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @include bp-md {
+    height: $header-height;
+  }
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: $container-width-xl;
+  padding: 0 12px;
+
+  @include bp-md {
+    padding: 0 18px;
+  }
+}
+
+.left,
+.right {
+  flex: 0 0 50%;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.headingLink {
+  text-decoration: none;
+}
+
+.headingLink:hover {
+  text-decoration: underline;
+}
+
+.heading {
+  color: $color-outline;
+  font: 900 16px/1 $font;
+  margin: 0;
+  padding: 0;
+
+  @include bp-md {
+    font-size: 24px;
+  }
+}
+
+.discordButton {
+  background: $color-purple-4;
+  border-radius: 8px;
+  color: $color-white;
+  display: block;
+  font: 700 14px/1 $font;
+  letter-spacing: -0.2px;
+  padding: 12px 6px 12px 30px;
+  position: relative;
+  text-decoration: none;
+
+  @include bp-md {
+    font-size: 16px;
+    padding: 12px 24px 12px 48px;
+  }
+}
+
+.discordButtonSvg {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  left: 6px;
+  position: absolute;
+  top: 10px;
+  width: 22px;
+
+  @include bp-md {
+    top: 5px;
+    width: 33px;
+  }
+}
