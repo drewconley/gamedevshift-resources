@@ -8,6 +8,7 @@ Existing tags:
   "Assets"
   "Tools"
   "Team Pick"
+  "Tilemaps"
   (Add more here)
 */
 
@@ -69,6 +70,12 @@ const data = [
       "Technical aspects and design choices behind pixel art construction, tutorials, timelapses, and concept-to-completion of pixel art pieces!",
     url: "https://www.youtube.com/channel/UCC26K7LTSrJK0BPAUyyvtQg",
     tags: ["Pixel Art"],
+  },
+  {
+    title: "Tiled",
+    blurb: "Flexible level editor",
+    url: "https://www.mapeditor.org",
+    tags: ["Tools", "Tilemaps"],
   },
   //Add more entries above this line ^
 ];

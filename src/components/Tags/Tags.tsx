@@ -9,7 +9,7 @@ export type TagsProps = {
 };
 
 export function Tags(props: TagsProps) {
-  const { className, tags } = props;
+  const { className, tags = [] } = props;
 
   return (
     <ul className={classnames(styles.root, className)}>

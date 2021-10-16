@@ -10,6 +10,10 @@ export function Card(props: CardProps) {
   const { resource } = props;
   const { title, url, tags, blurb } = resource;
 
+  if (!title || !url) {
+    return null;
+  }
+
   return (
     <div className={styles.root}>
       <h3 className={styles.heading}>

@@ -1,6 +1,6 @@
 export type Resource = {
-  title: string;
+  title?: string;
   blurb?: string;
-  url: string;
-  tags: Array<string>;
+  url?: string;
+  tags?: Array<string>;
 };

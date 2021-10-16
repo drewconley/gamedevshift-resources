@@ -1,15 +1,33 @@
+@import "../../variables.scss";
+
 .root {
-  padding: 18px;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: $header-height 0 0 0;
 }
 
 .resources {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 12px;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  max-width: $container-width-xl;
+  padding: 12px 6px;
 
-  @media (min-width: 900px) {
-    grid-template-columns: 1fr 1fr 1fr;
+  @include bp-sm {
+    grid-template-columns: 1fr 1fr;
   }
+
+  @include bp-lg {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 18px;
+  }
+}
+
+.addContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.add {
+  color: $color-white;
+  margin: 12px auto;
 }

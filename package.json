@@ -2,7 +2,7 @@
   "name": "gamedevshift-resources",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://chrisk-7777.github.io/gamedevshift-resources/",
+  "homepage": "https://drewconley.github.io/gamedevshift-resources/",
   "dependencies": {
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
