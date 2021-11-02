@@ -1,9 +1,6 @@
 $font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
   sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 
-$header-height: 60px;
-$header-height-md: 66px;
-
 $color-white: #ffffff;
 $color-black: #000000;
 $color-grass-1: #82e06d;
@@ -13,6 +10,7 @@ $color-purple-1: #dbdae5;
 $color-purple-2: #c3c1db;
 $color-purple-3: #8e94bb;
 $color-purple-4: #7377b4;
+$color-purple-5: #535682;
 
 $container-width-xl: 1190px;
 
@@ -43,4 +41,23 @@ $xl: 1200px;
   @media (min-width: $xl) {
     @content;
   }
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tag {
+  background-color: rgba($color-purple-1, 0.5);
+  border: 1px solid $color-purple-2;
+  border-radius: 12px;
+  color: $color-purple-5;
+  font: 700 10px/1 $font;
+  margin: 0 3px 3px 0;
+  padding: 3px 9px;
+  text-transform: uppercase;
 }

@@ -1,17 +1,47 @@
 import { Card } from "../../components/Card/Card";
 import { Header } from "../Header/Header";
+import { Resource, Tag } from "../../types";
+import { TagFilter } from "../TagFilter/TagFilter";
 import resources from "../../data";
+
 import styles from "./App.module.scss";
+import { useState } from "react";
+
+// Gather up a unique set of all the tags in all the resources as a once off operation
+const allTags = {
+  All: resources.length,
+  ...resources.reduce<Record<Tag, number>>((previousValue, { tags = [] }) => {
+    tags.forEach((tag) => {
+      previousValue[tag] = previousValue[tag] ? previousValue[tag] + 1 : 1;
+    });
+    return previousValue;
+  }, {}),
+};
 
 function App() {
+  const [currentTag, setCurrentTag] = useState<Tag>("All");
+
+  const filterByTag = ({ tags = [] }: Resource): boolean => {
+    return currentTag === "All" || tags.includes(currentTag);
+  };
+
   return (
-    <div className={styles.root}>
+    <main>
       <Header />
-      <div className={styles.resources}>
-        {resources.map((resource, key) => (
+      <div className={styles.tagFilter}>
+        <div className={styles.tagFilterContainer}>
+          <TagFilter
+            currentTag={currentTag}
+            onFilter={setCurrentTag}
+            tags={allTags}
+          />
+        </div>
+      </div>
+      <section className={styles.resources}>
+        {resources.filter(filterByTag).map((resource, key) => (
           <Card key={key} resource={resource} />
         ))}
-      </div>
+      </section>
       <div className={styles.addContainer}>
         <a
           className={styles.add}
@@ -22,7 +52,7 @@ function App() {
           Add a resource
         </a>
       </div>
-    </div>
+    </main>
   );
 }
 
