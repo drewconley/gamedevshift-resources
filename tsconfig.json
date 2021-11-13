@@ -16,8 +16,9 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "downlevelIteration": true
   },
-  "include": ["src", "global.d.ts"],
+  "include": ["src", "global.d.ts", "next-env.d.ts"],
   "exclude": ["node_modules"]
 }
