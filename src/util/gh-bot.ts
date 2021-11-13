@@ -43,7 +43,7 @@ ${args.tags.join(", ")}
 
 **Submitted by**
 ${args.username ? `@${args.username}` : "anonymous"}`,
-    base: "nextjs",
+    base: process.env.REPO_BRANCH ?? "main",
     head: `pr-bot-${Date.now()}`,
     changes: [
       {
