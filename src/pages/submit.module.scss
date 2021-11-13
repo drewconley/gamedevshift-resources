@@ -9,6 +9,15 @@
     flex-direction: column;
     gap: 16px;
   }
+
+  fieldset {
+    border: none;
+    padding: 0;
+  }
+
+  h2 {
+    margin: 0;
+  }
 }
 
 .label {
@@ -54,4 +63,8 @@
   font-weight: bold;
   border: none;
   border-radius: 5px;
+
+  &[disabled] {
+    opacity: 0.5;
+  }
 }
