@@ -21,7 +21,7 @@ export default function Submit() {
     initialValues: {
       title: "Tiled",
       blurb: "A very cool tilemap editor",
-      link: "mapeditor.org",
+      url: "mapeditor.org",
       tags: [{ value: "Game Dev", label: "Game Dev" }] as SelectOption[],
       username: "",
     },
@@ -35,12 +35,12 @@ export default function Submit() {
           tags: values.tags.map((t) => t.value),
         }),
       });
+      const data = await res.json().catch(() => ({}));
 
       if (res.status >= 400) {
         console.error(res);
-        setSubmitError(`[Error] ${res.status}: ${res.statusText}`);
+        setSubmitError(data.error ?? `[${res.status}] ${res.statusText}`);
       } else {
-        const data = await res.json();
         setPullRequestUrl(data.url);
       }
     },
@@ -48,7 +48,7 @@ export default function Submit() {
       title: Yup.string(),
       blurb: Yup.string().max(150, "Please keep under 150 characters"),
       tags: Yup.array(),
-      link: Yup.string().matches(
+      url: Yup.string().matches(
         /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
         "Please enter a valid URL"
       ),
@@ -71,11 +71,11 @@ export default function Submit() {
                   onChange={handleChange}
                 />
               </Label>
-              <Label label="Link" error={errors.link}>
+              <Label label="Link" error={errors.url}>
                 <input
                   type="text"
-                  name="link"
-                  value={values.link}
+                  name="url"
+                  value={values.url}
                   onChange={handleChange}
                 />
               </Label>
