@@ -3,17 +3,23 @@ import { createPullRequest as createPullRequestPlugin } from "octokit-plugin-cre
 import prettier from "prettier";
 
 const probot = createProbot({
+  env: {
+    NODE_ENV: process.env.NODE_ENV,
+    APP_ID: process.env.GITHUB_APP_ID,
+    PRIVATE_KEY: process.env.GITHUB_APP_PRIVATE_KEY,
+    LOG_LEVEL: process.env.GITHUB_APP_LOG_LEVEL,
+  },
   defaults: {
     Octokit: ProbotOctokit.plugin(createPullRequestPlugin),
   },
 });
 
 async function getClient() {
-  if (!process.env.INSTALL_ID) {
-    throw new Error("INSTALL_ID env missing");
+  if (!process.env.GITHUB_APP_INSTALL_ID) {
+    throw new Error("GITHUB_APP_INSTALL_ID env missing");
   }
 
-  return probot.auth(parseInt(process.env.INSTALL_ID));
+  return probot.auth(parseInt(process.env.GITHUB_APP_INSTALL_ID));
 }
 
 export const createPR = async (args: {
@@ -23,6 +29,18 @@ export const createPR = async (args: {
   tags: string[];
   username?: string;
 }) => {
+  if (!process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_OWNER) {
+    throw new Error("NEXT_PUBLIC_VERCEL_GIT_REPO_OWNER env missing");
+  }
+
+  if (!process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_SLUG) {
+    throw new Error("NEXT_PUBLIC_VERCEL_GIT_REPO_SLUG env missing");
+  }
+
+  if (!process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF) {
+    throw new Error("NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF env missing");
+  }
+
   const client = await getClient();
 
   // forgive me
@@ -31,8 +49,8 @@ export const createPR = async (args: {
   >["createPullRequest"];
 
   const pr = await createPullRequest({
-    owner: process.env.REPO_OWNER!,
-    repo: process.env.REPO!,
+    owner: process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_OWNER,
+    repo: process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_SLUG,
     title: `[Resource] ${args.title}`,
     body: `### [${args.title}](${args.url})
 **Blurb**
@@ -43,7 +61,7 @@ ${args.tags.join(", ")}
 
 **Submitted by**
 ${args.username ? `@${args.username}` : "anonymous"}`,
-    base: process.env.REPO_BRANCH ?? "main",
+    base: process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF,
     head: `pr-bot-${Date.now()}`,
     changes: [
       {
