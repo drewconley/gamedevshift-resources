@@ -11,7 +11,6 @@ import { getTags } from "src/util/get-tags";
 
 export const getStaticProps: GetStaticProps = () => {
   const tags = getTags();
-  console.log(tags);
 
   return {
     props: {
