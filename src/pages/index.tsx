@@ -7,11 +7,8 @@ import { GetStaticProps } from "next";
 import Link from "next/link";
 import Head from "next/head";
 import { ResourceCard } from "src/components/ResourceCard/ResourceCard";
-import { getTags } from "src/util/get-tags";
 
 export const getStaticProps: GetStaticProps = () => {
-  const tags = getTags();
-
   return {
     props: {
       // Gather up a unique set of all the tags in all the resources
