@@ -13,3 +13,7 @@ export function getTags(): string[] {
     }, new Set<string>()),
   ];
 }
+
+export function removeUrlProtocol(url: string) {
+  return url.replace(/^https?:\/\//, "");
+}

@@ -2,7 +2,7 @@ import { useFormik } from "formik";
 import { useMemo, useState } from "react";
 import Select from "react-select";
 import { Card } from "src/components/Card/Card";
-import { getTags } from "src/util/get-tags";
+import { getTags } from "src/lib/util";
 import styles from "./submit.module.scss";
 import * as Yup from "yup";
 
@@ -19,10 +19,10 @@ export default function Submit() {
     handleChange,
   } = useFormik({
     initialValues: {
-      title: "Tiled",
-      blurb: "A very cool tilemap editor",
-      url: "mapeditor.org",
-      tags: [{ value: "Game Dev", label: "Game Dev" }] as SelectOption[],
+      title: "",
+      blurb: "",
+      url: "",
+      tags: [] as SelectOption[],
       username: "",
     },
     onSubmit: async (values) => {

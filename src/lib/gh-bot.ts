@@ -1,6 +1,8 @@
 import { Probot, ProbotOctokit, createProbot } from "probot";
 import { createPullRequest as createPullRequestPlugin } from "octokit-plugin-create-pull-request";
 import prettier from "prettier";
+import slug from "slug";
+import { removeUrlProtocol } from "./util";
 
 const probot = createProbot({
   env: {
@@ -57,7 +59,7 @@ ${args.tags.join(", ")}
 **Submitted by**
 ${args.username ? `@${args.username}` : "anonymous"}`,
     base: process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF,
-    head: `pr-bot-${Date.now()}`,
+    head: `bot/add-resource-${slug(removeUrlProtocol(args.url), {})}`,
     changes: [
       {
         files: {
