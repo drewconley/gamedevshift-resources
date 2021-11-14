@@ -43,12 +43,7 @@ export const createPR = async (args: {
 
   const client = await getClient();
 
-  // forgive me
-  const createPullRequest = (client as any).createPullRequest as ReturnType<
-    typeof createPullRequestPlugin
-  >["createPullRequest"];
-
-  const pr = await createPullRequest({
+  const pr = await client.createPullRequest({
     owner: process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_OWNER,
     repo: process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_SLUG,
     title: `[Resource] ${args.title}`,
@@ -94,3 +89,11 @@ ${args.username ? `@${args.username}` : "anonymous"}`,
 
   return pr?.data.html_url;
 };
+
+declare module "@octokit/core" {
+  interface Octokit {
+    createPullRequest: ReturnType<
+      typeof createPullRequestPlugin
+    >["createPullRequest"];
+  }
+}
