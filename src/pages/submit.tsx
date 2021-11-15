@@ -44,7 +44,7 @@ export default function Submit() {
         setPullRequestUrl(data.url);
       }
     },
-    // validateOnChange: false,
+    validateOnChange: false,
     validationSchema: Yup.object().shape({
       title: Yup.string(),
       blurb: Yup.string().max(150, "Please keep under 150 characters"),
