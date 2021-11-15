@@ -38,9 +38,10 @@ export default function Submit() {
       const data = await res.json().catch(() => ({}));
 
       if (res.status >= 400) {
-        //t
-        console.error(res);
-        setSubmitError(data.error ?? `[${res.status}] ${res.statusText}`);
+        setSubmitError(
+          data.error ??
+            `[${res.status}] ${res.statusText || "Internal Server Error"}`
+        );
       } else {
         setPullRequestUrl(data.url);
       }
