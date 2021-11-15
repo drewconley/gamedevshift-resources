@@ -59,9 +59,9 @@
     "tags": ["Tools", "Tilemaps"]
   },
   {
-    "title": "Tom Francis's website",
-    "url": "https://www.pentadact.com",
-    "blurb": "",
+    "title": "Steam Quirks For Developers",
+    "url": "https://www.pentadact.com/2019-04-10-steam-quirks-for-developers",
+    "blurb": "Tom Francis (Gunpoint, Heat Signature) calls out some nice-to-know bits of information when preparing for a Steam release",
     "tags": ["Game Dev"]
   }
 ]
