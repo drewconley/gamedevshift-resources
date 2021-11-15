@@ -2,10 +2,11 @@ import { Card } from "../../components/Card/Card";
 import { Header } from "../Header/Header";
 import { Resource, Tag } from "../../types";
 import { TagFilter } from "../TagFilter/TagFilter";
-import resources from "../../data";
+import resources from "../../data.json";
 
 import styles from "./App.module.scss";
 import { useState } from "react";
+import { ResourceCard } from "../ResourceCard/ResourceCard";
 
 // Gather up a unique set of all the tags in all the resources as a once off operation
 const allTags = {
@@ -39,7 +40,7 @@ function App() {
       </div>
       <section className={styles.resources}>
         {resources.filter(filterByTag).map((resource, key) => (
-          <Card key={key} resource={resource} />
+          <ResourceCard key={key} resource={resource} />
         ))}
       </section>
       <div className={styles.addContainer}>

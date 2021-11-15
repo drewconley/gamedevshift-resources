@@ -1,0 +1,71 @@
+@import "../variables.scss";
+
+.card {
+  max-width: 400px;
+  margin: 40px auto;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  fieldset {
+    border: none;
+    padding: 0;
+  }
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+
+  input,
+  textarea {
+    border: 1px #cccccc solid;
+    padding: 8px;
+    border-radius: 5px;
+  }
+
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 0.8em;
+}
+
+.description {
+  opacity: 0.5;
+  font-size: 0.8em;
+}
+
+.label[data-error="true"] {
+  input,
+  textarea {
+    border-color: red;
+  }
+}
+
+.button {
+  cursor: pointer;
+  padding: 8px 16px;
+  background: $color-purple-4;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+
+  &[disabled] {
+    opacity: 0.5;
+  }
+}

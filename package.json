@@ -8,34 +8,29 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "classnames": "^2.3.1",
+    "clsx": "^1.1.1",
+    "formik": "^2.2.9",
     "gh-pages": "^3.2.3",
+    "next": "^12.0.0",
     "node-sass": "^6.0.1",
+    "octokit-plugin-create-pull-request": "^3.10.0",
+    "prettier": "^2.4.1",
+    "probot": "^12.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "typescript": "^4.1.2"
+    "react-select": "^5.2.1",
+    "slug": "^5.1.0",
+    "typescript": "^4.1.2",
+    "yup": "^0.32.11"
   },
   "scripts": {
-    "build": "react-scripts build",
-    "deploy": "gh-pages -d build",
-    "dev": "react-scripts start",
-    "predeploy": "npm run build"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@types/prettier": "^2.4.2",
+    "@types/slug": "^5.0.2",
+    "postcss": "^8.3.11"
   }
 }
