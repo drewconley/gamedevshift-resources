@@ -38,8 +38,10 @@ export default function Submit() {
       const data = await res.json().catch(() => ({}));
 
       if (res.status >= 400) {
-        console.error(res);
-        setSubmitError(data.error ?? `[${res.status}] ${res.statusText}`);
+        setSubmitError(
+          data.error ??
+            `[${res.status}] ${res.statusText || "Internal Server Error"}`
+        );
       } else {
         setPullRequestUrl(data.url);
       }
@@ -52,7 +54,7 @@ export default function Submit() {
         .min(1, "Please select at least one tag")
         .max(3, "Please select no more than 3 tags"),
       url: Yup.string().matches(
-        /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
+        /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/,
         "Please enter a valid URL"
       ),
       username: Yup.string(),

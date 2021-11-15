@@ -19,6 +19,20 @@ export default async function submitResource(
     }
   }
 
-  const url = await createPR(JSON.parse(req.body));
-  res.status(200).json({ url });
+  try {
+    const url = await createPR(JSON.parse(req.body));
+    res.status(200).json({ url });
+  } catch (e) {
+    const err = e as any;
+    if (err.status) {
+      if (err.response?.data?.message === "Reference already exists") {
+        res
+          .status(err.status)
+          .json({ error: "Pull Request already exists for this resource" });
+        return;
+      }
+    }
+    console.error(err);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 }
