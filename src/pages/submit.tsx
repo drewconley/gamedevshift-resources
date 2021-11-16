@@ -1,10 +1,12 @@
 import { useFormik } from "formik";
 import { useMemo, useState } from "react";
-import Select from "react-select";
+import CreatableSelect from "react-select/creatable";
 import { Card } from "src/components/Card/Card";
 import { getTags } from "src/lib/util";
 import styles from "./submit.module.scss";
 import * as Yup from "yup";
+import Head from "next/head";
+import slug from "slug";
 
 export default function Submit() {
   const [submitError, setSubmitError] = useState<string | null>(null);
@@ -63,6 +65,9 @@ export default function Submit() {
 
   return (
     <div>
+      <Head>
+        <title>Submit a Resource</title>
+      </Head>
       <Card className={styles.card}>
         {!pullRequestUrl && (
           <form className={styles.form} onSubmit={handleSubmit}>
@@ -185,13 +190,13 @@ function TagsSelect({
         .filter((tag) => tag !== "Team Pick")
         .map((tag) => ({
           label: tag,
-          value: tag,
+          value: slug(tag),
         })),
     []
   );
 
   return (
-    <Select
+    <CreatableSelect
       instanceId="tags"
       isMulti
       value={value}
