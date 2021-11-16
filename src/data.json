@@ -63,5 +63,11 @@
     "url": "https://www.pentadact.com/2019-04-10-steam-quirks-for-developers",
     "blurb": "Tom Francis (Gunpoint, Heat Signature) calls out some nice-to-know bits of information when preparing for a Steam release",
     "tags": ["Game Dev"]
+  },
+  {
+    "title": "itch.io",
+    "url": "https://itch.io/game-assets",
+    "blurb": "An excellent resource for both free and paid assets. Includes 2D, 3D, music, sound effects and even tools",
+    "tags": ["Assets"]
   }
 ]
