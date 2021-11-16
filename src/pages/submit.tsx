@@ -1,14 +1,21 @@
 import { useFormik } from "formik";
-import { useMemo, useState } from "react";
-import Select from "react-select";
+import { useLayoutEffect, useMemo, useState } from "react";
+import CreatableSelect from "react-select/creatable";
 import { Card } from "src/components/Card/Card";
 import { getTags } from "src/lib/util";
 import styles from "./submit.module.scss";
 import * as Yup from "yup";
+import Head from "next/head";
+import slug from "slug";
 
 export default function Submit() {
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [pullRequestUrl, setPullRequestUrl] = useState<string | null>(null);
+  const [username, setUsername] = useState<string>("");
+
+  useLayoutEffect(() => {
+    setUsername(localStorage.getItem("username") || "");
+  }, []);
 
   const {
     values,
@@ -18,16 +25,20 @@ export default function Submit() {
     handleSubmit,
     handleChange,
   } = useFormik({
-    initialValues: {
-      title: "",
-      blurb: "",
-      url: "",
-      tags: [] as SelectOption[],
-      username: "",
-    },
+    enableReinitialize: true,
+    initialValues: useMemo(
+      () => ({
+        title: "",
+        blurb: "",
+        url: "",
+        tags: [] as SelectOption[],
+        username,
+      }),
+      [username]
+    ),
     onSubmit: async (values) => {
       setSubmitError(null);
-
+      localStorage.setItem("username", values.username);
       const res = await fetch(`/api/submit-resource`, {
         method: "POST",
         body: JSON.stringify({
@@ -63,6 +74,9 @@ export default function Submit() {
 
   return (
     <div>
+      <Head>
+        <title>Submit a Resource</title>
+      </Head>
       <Card className={styles.card}>
         {!pullRequestUrl && (
           <form className={styles.form} onSubmit={handleSubmit}>
@@ -185,13 +199,13 @@ function TagsSelect({
         .filter((tag) => tag !== "Team Pick")
         .map((tag) => ({
           label: tag,
-          value: tag,
+          value: slug(tag),
         })),
     []
   );
 
   return (
-    <Select
+    <CreatableSelect
       instanceId="tags"
       isMulti
       value={value}
