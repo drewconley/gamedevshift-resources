@@ -49,7 +49,10 @@ export const createPR = async (args: {
     owner: process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_OWNER,
     repo: process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_SLUG,
     title: `[Resource] ${args.title}`,
-    body: `### [${args.title}](${args.url})
+    body: `### ${args.title}
+**URL**
+[${args.url}](${args.url})
+
 **Blurb**
 ${args.blurb}
 
@@ -57,7 +60,12 @@ ${args.blurb}
 ${args.tags.join(", ")}
 
 **Submitted by**
-${args.username ? `@${args.username}` : "anonymous"}`,
+${args.username ? `@${args.username}` : "anonymous"}
+
+---
+
+_Note to maintainers: if this resource needs to be resubmitted, please close this PR and delete the branch_
+`,
     base: process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF,
     head: `bot/add-resource-${slug(removeUrlProtocol(args.url), {})}`,
     changes: [
