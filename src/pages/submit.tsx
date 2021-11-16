@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-import { useMemo, useState } from "react";
+import { useLayoutEffect, useMemo, useState } from "react";
 import CreatableSelect from "react-select/creatable";
 import { Card } from "src/components/Card/Card";
 import { getTags } from "src/lib/util";
@@ -11,6 +11,11 @@ import slug from "slug";
 export default function Submit() {
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [pullRequestUrl, setPullRequestUrl] = useState<string | null>(null);
+  const [username, setUsername] = useState<string>("");
+
+  useLayoutEffect(() => {
+    setUsername(localStorage.getItem("username") || "");
+  }, []);
 
   const {
     values,
@@ -20,16 +25,20 @@ export default function Submit() {
     handleSubmit,
     handleChange,
   } = useFormik({
-    initialValues: {
-      title: "",
-      blurb: "",
-      url: "",
-      tags: [] as SelectOption[],
-      username: "",
-    },
+    enableReinitialize: true,
+    initialValues: useMemo(
+      () => ({
+        title: "",
+        blurb: "",
+        url: "",
+        tags: [] as SelectOption[],
+        username,
+      }),
+      [username]
+    ),
     onSubmit: async (values) => {
       setSubmitError(null);
-
+      localStorage.setItem("username", values.username);
       const res = await fetch(`/api/submit-resource`, {
         method: "POST",
         body: JSON.stringify({
