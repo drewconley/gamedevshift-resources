@@ -5,6 +5,9 @@ A collection of resources for game developers collected by the GameDev Shift com
 Join the community here:
 https://discord.gg/umD2GRy
 
+View the page here:
+https://resources.gamedevshift.com/
+
 ## Contributing
 
 ### Adding resources
