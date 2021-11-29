@@ -6,7 +6,7 @@ export function Header() {
     <header className={styles.root}>
       <div className={styles.container}>
         <div className={styles.left}>
-          <a className={styles.headingLink} href="https://gamedevshift.com/">
+          <a className={styles.headingLink} href="https://resources.gamedevshift.com/">
             <h1 className={styles.heading}>GameDev Shift</h1>
           </a>
         </div>
