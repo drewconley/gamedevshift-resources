@@ -69,5 +69,11 @@
     "url": "https://itch.io/game-assets",
     "blurb": "An excellent resource for both free and paid assets. Includes 2D, 3D, music, sound effects and even tools",
     "tags": ["Assets"]
+  },
+  {
+    "title": "Navmesh pathfinding",
+    "url": "https://github.com/mikewesthad/navmesh",
+    "blurb": "A plugin for path-finding in JS using navmeshes, with wrappers for Phaser 3 and Phaser 2 ",
+    "tags": ["Pathfinding", "javascript"]
   }
 ]
