@@ -75,5 +75,11 @@
     "url": "https://github.com/mikewesthad/navmesh",
     "blurb": "A plugin for path-finding in JS using navmeshes, with wrappers for Phaser 3 and Phaser 2 ",
     "tags": ["Pathfinding", "javascript"]
+  },
+  {
+    "title": "HUDS+GUIS",
+    "url": "https://www.hudsandguis.com/",
+    "blurb": "HUDS+GUIS is a site with the most creative and interesting examples of UI design. Sources are films, TV and games",
+    "tags": ["UI"]
   }
 ]
