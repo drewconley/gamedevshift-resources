@@ -81,5 +81,11 @@
     "url": "https://www.hudsandguis.com/",
     "blurb": "HUDS+GUIS is a site with the most creative and interesting examples of UI design. Sources are films, TV and games",
     "tags": ["UI"]
+  },
+  {
+    "title": "Why do I need a local web server for gamedev?",
+    "url": "https://phaser.io/tutorials/getting-started-phaser3",
+    "blurb": "A common question when doing local dev is why do we need a local web server? \n\nPhaser has an excellent explanation in their getting started guide",
+    "tags": ["game-dev", "javascript", "Getting Started"]
   }
 ]
