@@ -9,7 +9,7 @@ export type CardProps = {
 
 export function ResourceCard(props: CardProps) {
   const { resource } = props;
-  const { title, url, tags, blurb } = resource;
+  const { title, url, tags, blurb, image } = resource;
 
   if (!title || !url) {
     return null;
@@ -17,13 +17,29 @@ export function ResourceCard(props: CardProps) {
 
   return (
     <Card>
-      <h3 className={styles.heading}>
-        <a target="_blank" rel="noreferrer" href={url} title={title}>
-          {title}
+      <div className={styles.root}>
+        {image ? (
+          <img className={styles.thumbnail} src={image} alt={title} />
+        ) : (
+          <div className={styles.thumbnailPlaceholder} />
+        )}
+        <h3 className={styles.heading}>
+          <a target="_blank" rel="noreferrer" href={url} title={title}>
+            {title}
+          </a>
+        </h3>
+        <Tags tags={tags} className={styles.tags} />
+        <p className={styles.blurb}>{blurb}</p>
+        <a
+          target="_blank"
+          className={styles.button}
+          rel="noreferrer"
+          href={url}
+          title={title}
+        >
+          View
         </a>
-      </h3>
-      <Tags tags={tags} className={styles.tags} />
-      {blurb ? <p className={styles.blurb}>{blurb}</p> : null}
+      </div>
     </Card>
   );
 }

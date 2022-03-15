@@ -1,5 +1,13 @@
 @import "../../variables.scss";
 
+.root {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+
 .heading {
   color: $color-outline;
   font: 700 22px/1 $font;
@@ -20,12 +28,35 @@
   text-decoration: underline;
 }
 
-.tags {
-  margin: 12px 0 0;
-}
-
 .blurb {
   color: $color-outline;
+  flex: 1 1 auto;
+  flex: 1 0 auto;
   font: 400 16px/1.5 $font;
-  margin: 12px 0 0;
+  margin: 0;
+}
+
+.thumbnail,
+.thumbnailPlaceholder {
+  display: block;
+  height: 240px;
+  margin: -30px -30px 0;
+  object-fit: cover;
+  width: calc(100% + 60px);
+}
+
+.thumbnailPlaceholder {
+  background: linear-gradient(45deg, $color-purple-1, $color-purple-2);
+}
+
+.button {
+  background: $color-purple-4;
+  border: none;
+  border-radius: 5px;
+  color: $color-white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  padding: 8px 16px;
+  text-decoration: none;
 }
