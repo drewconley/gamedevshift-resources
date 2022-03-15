@@ -27,6 +27,7 @@ async function getClient() {
 export const createPR = async (args: {
   title: string;
   url: string;
+  image: string;
   blurb: string;
   tags: string[];
   username?: string;
@@ -52,6 +53,9 @@ export const createPR = async (args: {
     body: `### ${args.title}
 **URL**
 [${args.url}](${args.url})
+
+**Image**
+[${args.image}](${args.image})
 
 **Blurb**
 ${args.blurb}
@@ -85,6 +89,7 @@ _Note to maintainers: if this resource needs to be resubmitted, please close thi
                 title: args.title,
                 url: args.url,
                 blurb: args.blurb,
+                image: args.image,
                 tags: args.tags,
               },
             ];

@@ -5,4 +5,5 @@ export type Resource = {
   blurb?: string;
   url?: string;
   tags?: Array<Tag>;
+  image?: string;
 };

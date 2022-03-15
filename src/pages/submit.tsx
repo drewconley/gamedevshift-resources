@@ -8,6 +8,9 @@ import * as Yup from "yup";
 import Head from "next/head";
 import slug from "slug";
 
+const urlMatcher =
+  /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
+
 export default function Submit() {
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [pullRequestUrl, setPullRequestUrl] = useState<string | null>(null);
@@ -31,6 +34,7 @@ export default function Submit() {
         title: "",
         blurb: "",
         url: "",
+        image: "",
         tags: [] as SelectOption[],
         username,
       }),
@@ -64,10 +68,8 @@ export default function Submit() {
       tags: Yup.array()
         .min(1, "Please select at least one tag")
         .max(3, "Please select no more than 3 tags"),
-      url: Yup.string().matches(
-        /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/,
-        "Please enter a valid URL"
-      ),
+      url: Yup.string().matches(urlMatcher, "Please enter a valid URL"),
+      image: Yup.string().matches(urlMatcher, "Please enter a valid image URL"),
       username: Yup.string(),
     }),
   });
@@ -95,6 +97,18 @@ export default function Submit() {
                   type="text"
                   name="url"
                   value={values.url}
+                  onChange={handleChange}
+                />
+              </Label>
+              <Label
+                label="Image URL"
+                error={errors.url}
+                description="Enter the full url of a thumbnail image"
+              >
+                <input
+                  type="text"
+                  name="image"
+                  value={values.image}
                   onChange={handleChange}
                 />
               </Label>

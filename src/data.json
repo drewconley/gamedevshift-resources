@@ -2,90 +2,105 @@
   {
     "title": "Miniboss Pixel art tutorials",
     "url": "https://blog.studiominiboss.com/pixelart",
-    "tags": ["Pixel Art"]
+    "tags": ["Pixel Art"],
+    "image": "https://64.media.tumblr.com/9bbb85c753b861eaa63a7c0d39bb7236/tumblr_inline_pl3bsxXuy01qdiwz3_500.png"
   },
   {
     "title": "Drew Conley Youtube channel",
     "blurb": "YouTube channel dedicated to Game Development using JavaScript or Godot game engine.",
     "url": "https://www.youtube.com/c/DrewConley/",
-    "tags": ["Game Dev", "Godot", "JavaScript"]
+    "tags": ["Game Dev", "Godot", "JavaScript"],
+    "image": "https://i3.ytimg.com/vi/fyi4vfbKEeo/maxresdefault.jpg"
   },
   {
     "title": "Interface in Game",
     "blurb": "An extensive collection of interfaces across various games and genres",
     "url": "https://interfaceingame.com",
-    "tags": ["UI"]
+    "tags": ["UI"],
+    "image": "https://interfaceingame.com/wp-content/uploads/share_twitter_interfaceingame.jpg"
   },
   {
     "title": "Game UI Database",
     "blurb": "An extensive collection of interfaces across various games and genres",
     "url": "https://www.gameuidatabase.com",
-    "tags": ["UI"]
+    "tags": ["UI"],
+    "image": "http://www.gameuidatabase.com/metaimg.jpg"
   },
   {
     "title": "Kenney Assets",
     "blurb": "Kenney has created thousands of sprites, 3D models and sound effects which you can use in your projects. The generous public domain license allows any kind of use, even commercial!",
     "url": "https://www.kenney.nl/assets",
-    "tags": ["Assets"]
+    "tags": ["Assets"],
+    "image": "https://kenney.nl/data/img/logo_kga1.png"
   },
   {
     "title": "Aseprite",
     "blurb": "Animated sprite editor & pixel art tool",
     "url": "https://www.aseprite.org",
-    "tags": ["Tools", "Pixel Art", "Team Pick"]
+    "tags": ["Tools", "Pixel Art", "Team Pick"],
+    "image": "https://www.aseprite.org/assets/images/og-image.png"
   },
   {
     "title": "Peter Milko - Pixel Art 101",
     "blurb": "Peter Milko Youtube's series for pixel art beginner using Aseprite",
     "url": "https://www.youtube.com/playlist?list=PLmac3HPrav-9UWt-ahViIZxpyQxJ2wPSH",
-    "tags": ["Pixel Art"]
+    "tags": ["Pixel Art"],
+    "image": "https://i3.ytimg.com/vi/51u9ZgrEThg/maxresdefault.jpg"
   },
   {
     "title": "AdamCYounis - Pixel Art Class",
     "blurb": "AdamCYounis Youtube's series for pixel art beginner using Aseprite",
     "url": "https://www.youtube.com/playlist?list=PLLdxW--S_0h4dlWUpl-TzBp-ulqK3NiM_",
-    "tags": ["Pixel Art"]
+    "tags": ["Pixel Art"],
+    "image": "https://i3.ytimg.com/vi/7BWr2tlK-4c/maxresdefault.jpg"
   },
   {
     "title": "Brandon James Greer Youtube Channel",
     "blurb": "Technical aspects and design choices behind pixel art construction, tutorials, timelapses, and concept-to-completion of pixel art pieces!",
     "url": "https://www.youtube.com/channel/UCC26K7LTSrJK0BPAUyyvtQg",
-    "tags": ["Pixel Art"]
+    "tags": ["Pixel Art"],
+    "image": "https://i3.ytimg.com/vi/UtWxmVKfGjs/maxresdefault.jpg"
   },
   {
     "title": "Tiled",
     "blurb": "Flexible level editor",
     "url": "https://www.mapeditor.org",
-    "tags": ["Tools", "Tilemaps"]
+    "tags": ["Tools", "Tilemaps"],
+    "image": "https://www.mapeditor.org/img/tiled-logo-filled.png"
   },
   {
     "title": "Steam Quirks For Developers",
     "url": "https://www.pentadact.com/2019-04-10-steam-quirks-for-developers",
     "blurb": "Tom Francis (Gunpoint, Heat Signature) calls out some nice-to-know bits of information when preparing for a Steam release",
-    "tags": ["Game Dev"]
+    "tags": ["Game Dev"],
+    "image": "https://cdn.akamai.steamstatic.com/store/home/store_home_share.jpg"
   },
   {
     "title": "itch.io",
     "url": "https://itch.io/game-assets",
     "blurb": "An excellent resource for both free and paid assets. Includes 2D, 3D, music, sound effects and even tools",
-    "tags": ["Assets"]
+    "tags": ["Assets"],
+    "image": "https://pbs.twimg.com/profile_images/1212846124945428480/w1htiJ0v_200x200.png"
   },
   {
     "title": "Navmesh pathfinding",
     "url": "https://github.com/mikewesthad/navmesh",
     "blurb": "A plugin for path-finding in JS using navmeshes, with wrappers for Phaser 3 and Phaser 2 ",
-    "tags": ["Pathfinding", "javascript"]
+    "tags": ["Pathfinding", "javascript"],
+    "image": "https://github.com/mikewesthad/navmesh/raw/master/doc-source/combined.png"
   },
   {
     "title": "HUDS+GUIS",
     "url": "https://www.hudsandguis.com/",
     "blurb": "HUDS+GUIS is a site with the most creative and interesting examples of UI design. Sources are films, TV and games",
-    "tags": ["UI"]
+    "tags": ["UI"],
+    "image": "https://pbs.twimg.com/profile_images/797934905619410944/zBmfcBWU_200x200.jpg"
   },
   {
     "title": "Why do I need a local web server for gamedev?",
     "url": "https://phaser.io/tutorials/getting-started-phaser3",
     "blurb": "A common question when doing local dev is why do we need a local web server? \n\nPhaser has an excellent explanation in their getting started guide",
-    "tags": ["game-dev", "javascript", "Getting Started"]
+    "tags": ["game-dev", "javascript", "Getting Started"],
+    "image": "https://pbs.twimg.com/profile_images/1457712122088001544/rWVuECYM_200x200.jpg"
   }
 ]
