@@ -87,5 +87,12 @@
     "url": "https://phaser.io/tutorials/getting-started-phaser3",
     "blurb": "A common question when doing local dev is why do we need a local web server? \n\nPhaser has an excellent explanation in their getting started guide",
     "tags": ["game-dev", "javascript", "Getting Started"]
+  },
+  {
+    "title": "test ignore",
+    "url": "http://example.org",
+    "blurb": "test blurb",
+    "image": "http://example.org/image.png",
+    "tags": ["pixel-art"]
   }
 ]
