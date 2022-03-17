@@ -102,5 +102,12 @@
     "blurb": "A common question when doing local dev is why do we need a local web server? \n\nPhaser has an excellent explanation in their getting started guide",
     "tags": ["game-dev", "javascript", "Getting Started"],
     "image": "https://pbs.twimg.com/profile_images/1457712122088001544/rWVuECYM_200x200.jpg"
+  },
+  {
+    "title": "Screaming Brain Studios",
+    "url": "https://screamingbrainstudios.itch.io",
+    "blurb": "Screaming Brain Studios actively creates textures and 2D Sprites for games.",
+    "image": "https://cdn.discordapp.com/attachments/893662503429607444/953811599968329768/rGG6Dg.png",
+    "tags": ["tilemaps", "assets"]
   }
 ]
